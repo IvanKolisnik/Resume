@@ -1,0 +1,29 @@
+{% extends 'core/base.html' %}
+
+{% block content %}
+<div class="container mt-3 text-dark">
+    <h1 class="heading border-bottom border-info  ">CONTACT </h1>
+
+<h4 class="text-center alert alert-info">Don't be a stranger !! Just say hello</h4>
+<div class="row">
+    <div class="col-sm-8">
+        
+        <form action="" method="POST" novalidate>
+        {% csrf_token %}
+            {% for fm in form %}
+              {{fm.label_tag}} {{fm}} {{fm.errors|striptags}}<br>
+            {% endfor %}
+            
+            <input type="submit" class="btn btn-success" value="Submit">
+        </form>
+
+    </div>
+</div>
+
+<div class="text-center">
+    <a href="https://www.instagram.com/ivan_kolisnik/"><i class="fab fa-instagram fa-2x" style="color: pink; padding-left: 4px;" aria-hidden="true" ></i></a>
+    <a href="https://github.com/IvanKolisnik"><i class="fab fa-github fa-2x"  style="color: black; padding-left: 4px;"></i></a>
+    
+</div>
+
+{% endblock content %}

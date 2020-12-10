@@ -1,0 +1,31 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block content %}
+<div class=" mt-3 ">
+    <div class="text-center">
+        <img src=" {% static 'core/images/photo.jpg' %}" alt="Profile Pic" class="img-thumbnail" width="250px"
+            height="150px">
+    </div>
+    <div class="mt-3 text-dark mx-5 text-justify">
+        <h1 class="font-weight-bold st-font">Привіт,</h1>
+
+        <div class="px-4 " style="line-height: 2rem;">
+            <p style="text-indent:100px" class="text-dark"> <b class="text-warning">Я Іван Колісник
+Народився 7 липня 1999 року в селі Моринці, Звенигородського району.
+
+Школу закінчив на добре я б сказав. Пішов навчатись на програмну інженерію, тому що ще з малих літ почав цікавитись комп'ютером і всим що з ним пов'язано.
+
+Хотів відразу поступити у Черкаси в університет. Ну доля вирішила, щоб я спочатку пішов у коледж, де я отримав багато теоретичних і практичних навичок і це пішло мені на користь, тепер я знаю базові речі у мовах програмування.
+                <br>
+                Досвід використання веб-розробки<b class="text-warning"> Django (or other MVC frameworks), JavaScript/jQuery, CSS ,front-end JS Frameworks and HTML</b>
+            </p>
+        </div>
+    </div>
+    <div class="text-center">
+        <a href="{% url 'contact' %}" class="btn btn-outline-warning my-2 mr-5">Напишіть мені</a>
+        <a href="{% url 'contact' %}" class="btn btn-outline-info my-2">Контакти</a>
+    </div>
+</div>
+
+{% endblock content %}
